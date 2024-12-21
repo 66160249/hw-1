@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - แนะนำสถานที่ท่องเที่ยว</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ยินดีต้อนรับสู่จังหวัดชลบุรี</h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="places.html">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>ภาพรวมจังหวัด</h2>
+            <p>จังหวัดชลบุรีเป็นหนึ่งในจุดหมายปลายทางยอดนิยมที่นักท่องเที่ยวทั้งในประเทศและต่างประเทศต้องไม่พลาด! ตั้งอยู่ในภาคตะวันออกของประเทศไทย ชลบุรีเป็นจังหวัดที่เต็มไปด้วยแหล่งท่องเที่ยวธรรมชาติที่สวยงาม เมืองที่มีประวัติศาสตร์อันยาวนาน และสถานที่พักผ่อนที่ตอบโจทย์ทุกความต้องการ ตั้งแต่การเที่ยวทะเลที่มีชื่อเสียง ไปจนถึงการสัมผัสวัฒนธรรมท้องถิ่นที่มีเสน่ห์ ล้วนทำให้การเดินทางมาที่ชลบุรีเป็นประสบการณ์ที่ไม่เหมือนใคร</p>
+        </section>
+        <section>
+            <h2></h2>
+            <div class="highlight">
+                <article>
+                    <img src="https://roijang.com/wp-content/uploads/2023/06/395b55b2-e65c-4472-8f04-d2d40f2207b2.jpg" alt="เกาะล้าน">
+                    <!-- ทำข้อความลิงก์ -->
+                    <h3><a href="places.html" style="text-decoration: none; color: inherit;">>>สถานที่ท่องเที่ยวจังหวัดชลบุรี<<</a></h3>
+                    <p>วันนี้เราจะมาพาทุกคนไปชม 5 สถานที่ท่องเที่ยวจังหวัดชลบุรี ที่น่าสนใจกัน</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Section ใหม่ -->
+        <section>
+            <h2>สถานที่ท่องเที่ยวที่น่าสนใจ</h2>
+            <div class="highlight">
+                <!-- 1 -->
+                <article>
+                    <img src="https://today-obs.line-scdn.net/0hplzLjYirL0NHNT_Avm9QFH9jIzJ0UzVKZVIwLTE1dSRjGWhCc1p8IGYwcm9jBTtAZ1BlLWo2I3Y4UGgSLg/w644" alt="หมูเด้ง">
+                    <h3><a href="places.html#sanctuary" style="text-decoration: none; color: inherit;">>>ไปหาหมูเด้ง<<</a></h3>
+                    <p>ไปพบกับความน่ารักของหมูเด้งได้ที่สวนสัตว์เปิดเขาเขียว    </p>
+                </article>
+                <!-- 2 -->
+                <article>
+                    <img src="https://res.klook.com/images/fl_lossy.progressive,q_65/c_fill,w_1200,h_630/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/i6tga9l3mg8r54lpkcm8/%E0%B8%81%E0%B8%B4%E0%B8%88%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95%E0%B8%B7%E0%B9%89%E0%B8%99%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%94%E0%B8%B3%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%A5%E0%B8%B6%E0%B8%81%E0%B9%83%E0%B8%99%E0%B8%9E%E0%B8%B1%E0%B8%97%E0%B8%A2%E0%B8%B2%20%E0%B9%82%E0%B8%94%E0%B8%A2%20Manta%20Catamaran.jpg" alt="Coral Island">
+                    <h3><a href="places.html#coral" style="text-decoration: none; color: inherit;">>>ไปดำน้ำที่เกาะล้าน<<</a></h3>
+                    <p>ผจญภัยกับโลกใต้ทะเลที่เกาะล้านซึ่งเต็มไปด้วยชีวิตทางทะเลที่มีสีสัน</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 จังหวัดชลบุรี</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
