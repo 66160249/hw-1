@@ -1,131 +1,147 @@
-	/* Reset พื้นฐาน */
-    body, h1, h2, h3, p, ul, li, a {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    /* รูปแบบพื้นฐาน */
-    body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        color: #333;
-        margin: 0;
-        padding: 0;
-        background-color: #f4f4f9;
-    }
-    
-    header {
-        background: #0073e6;
-        color: #fff;
-        padding: 1rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    header h1 {
-        font-size: 1.8rem;
-    }
-    
-    header nav ul {
-        list-style: none;
-        display: flex;
-        gap: 1rem;
-    }
-    
-    header nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    
-    header nav ul li a:hover {
-        text-decoration: underline;
-    }
-    
+/* Reset พื้นฐาน */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* รูปแบบพื้นฐาน */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background: #0073e6;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hamburger {
+    display: none; /* ซ่อน Hamburger ในหน้าจอใหญ่ */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* สำหรับหน้าจอเล็ก */
+@media (max-width: 768px) {
+    /* Hamburger Menu */
     .hamburger {
-        display: none;
-        font-size: 1.5rem;
-        background: none;
-        border: none;
-        color: #fff;
-        cursor: pointer;
+        display: block; /* แสดง Hamburger */
+        font-size: 1.5rem; /* ขนาดไอคอน */
+        background: none; /* ไม่มีพื้นหลัง */
+        border: none; /* ไม่มีขอบ */
+        color: #fff; /* สีของไอคอน */
+        cursor: pointer; /* เปลี่ยนเป็นมือชี้ */
+        position: fixed; /* คงตำแหน่ง */
+        top: 15px; /* ห่างจากขอบบน */
+        right: 15px; /* ห่างจากขอบขวา */
+        z-index: 1100; /* อยู่เหนือเมนู */
     }
-    
-    /* สำหรับหน้าจอเล็ก */
-    @media (max-width: 768px) {
-        .hamburger {
-            display: block;
-        }
-    
-        nav ul {
-            display: none;
-            flex-direction: column;
-            background: #0073e6;
-            padding: 1rem;
-            position: absolute;
-            top: 60px;
-            right: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-        }
-    
-        nav ul.show {
-            display: flex;
-        }
+
+    /* กำหนดตำแหน่งเมนู */
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        background: #0073e6; /* สีพื้นหลังเมนู */
+        padding: 1rem; /* ระยะห่างด้านใน */
+        position: fixed; /* ตำแหน่งเมนูให้ลอย */
+        top: 0; /* เริ่มที่ขอบด้านบน */
+        right: -100%; /* เริ่มซ่อนเมนูจากขอบขวา */
+        height: 100%; /* เต็มความสูงหน้าจอ */
+        width: 250px; /* ความกว้างของเมนู */
+        transition: right 0.3s ease-in-out; /* เอฟเฟกต์เลื่อนเมนูนุ่มนวล */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* เงาของเมนู */
+        z-index: 1000; /* อยู่เหนือเนื้อหาอื่น */
     }
-    
-    main {
-        padding: 2rem;
+
+    /* แสดงเมนูเมื่อมีคลาส show */
+    nav ul.show {
+        right: 0; /* เลื่อนเมนูออกมาเต็ม */
     }
-    
-    section {
-        margin-bottom: 2rem;
-    }
-    
-    /* ปรับขนาดภาพ */
-    .highlight article {
-        margin-bottom: 2rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        overflow: hidden;
-        background: #fff;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ปรับขนาดภาพ */
+.highlight article {
+    margin-bottom: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight article img {
+    width: 100%; /* ให้ภาพขยายเต็ม container */
+    max-width: 600px; /* จำกัดขนาดสูงสุดของภาพ */
+    height: auto; /* รักษาอัตราส่วน */
+    margin: 0 auto; /* จัดกึ่งกลางภาพ */
+    display: block;
+}
+
+/* Responsive สำหรับ Desktop */
+@media (min-width: 1024px) {
     .highlight article img {
-        width: 100%; /* ให้ภาพขยายเต็ม container */
-        max-width: 600px; /* จำกัดขนาดสูงสุดของภาพ */
-        height: auto; /* รักษาอัตราส่วน */
-        margin: 0 auto; /* จัดกึ่งกลางภาพ */
-        display: block;
+        max-width: 900px; /* ขนาดภาพที่เหมาะสมบน Desktop */
     }
-    
-    /* Responsive สำหรับ Desktop */
-    @media (min-width: 1024px) {
-        .highlight article img {
-            max-width: 900px; /* ขนาดภาพที่เหมาะสมบน Desktop */
-        }
-    }
-    
-    .highlight article h3 {
-        font-size: 1.5rem;
-        margin: 1rem;
-        color: #0073e6;
-    }
-    
-    .highlight article p {
-        margin: 1rem;
-        font-size: 1rem;
-        line-height: 1.5;
-        color: #555;
-    }
-    
-    footer {
-        background: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
-        font-size: 0.9rem;
-    }
+}
+
+.highlight article h3 {
+    font-size: 1.5rem;
+    margin: 1rem;
+    color: #0073e6;
+}
+
+.highlight article p {
+    margin: 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
