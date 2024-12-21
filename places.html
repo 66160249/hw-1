@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก - แนะนำสถานที่ท่องเที่ยว</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>ยินดีต้อนรับสู่จังหวัดชลบุรี</h1>
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="places.html">สถานที่ท่องเที่ยว</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>ภาพรวมจังหวัด</h2>
+            <p>จังหวัดชลบุรีเป็นหนึ่งในจุดหมายปลายทางยอดนิยมที่นักท่องเที่ยวทั้งในประเทศและต่างประเทศต้องไม่พลาด! ตั้งอยู่ในภาคตะวันออกของประเทศไทย ชลบุรีเป็นจังหวัดที่เต็มไปด้วยแหล่งท่องเที่ยวธรรมชาติที่สวยงาม เมืองที่มีประวัติศาสตร์อันยาวนาน และสถานที่พักผ่อนที่ตอบโจทย์ทุกความต้องการ ตั้งแต่การเที่ยวทะเลที่มีชื่อเสียง ไปจนถึงการสัมผัสวัฒนธรรมท้องถิ่นที่มีเสน่ห์ ล้วนทำให้การเดินทางมาที่ชลบุรีเป็นประสบการณ์ที่ไม่เหมือนใคร</p>
+        </section>
+        <section>
+            <h2>สถานที่แนะนำ</h2>
+            <div class="highlight">
+                <article>
+                    <img src="https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2024/05/%E0%B8%94%E0%B8%B5%E0%B9%84%E0%B8%8B%E0%B8%99%E0%B9%8C%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%B1%E0%B8%87%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%84%E0%B8%94%E0%B9%89%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-2024-05-22T125922.412.png" alt="เกาะล้าน">
+                    <h3>เกาะล้าน</h3>
+                    <p>เกาะล้าน เป็นหนึ่งในจุดหมายที่ยอดเยี่ยมสำหรับนักท่องเที่ยวที่รักทะเล ตั้งอยู่ไม่ไกลจากพัทยา จังหวัดชลบุรี เพียง 30 นาทีจากฝั่ง ด้วยน้ำทะเลใสสะอาดและหาดทรายขาวสวยๆ เช่น หาดเทียน, หาดตาแหวน และ หาดนวล ทำให้เกาะล้านเป็นที่นิยมสำหรับการพักผ่อนและกิจกรรมทางน้ำต่างๆ เช่น ดำน้ำ, เจ็ทสกี หรือแม้แต่การตกปลา
+
+                        นอกจากทะเลที่สวยงาม เกาะล้านยังมีกิจกรรมทางธรรมชาติที่น่าสนใจ เช่น การเดินชมวิวและเยี่ยมชมประภาคารหรือวัดต่างๆ ที่จะทำให้คุณได้สัมผัสทั้งธรรมชาติและวัฒนธรรมท้องถิ่น
+                        
+                        หากคุณกำลังมองหาสถานที่พักผ่อนที่เงียบสงบและสวยงาม เกาะล้านคือที่ที่คุณไม่ควรพลาด!</p>
+                    <!-- ที่มาของรูป: https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.ananda.co.th%2Fblog%2Fthegenc%2F%25E0%25B9%2580%25E0%25B8%2581%25E0%25B8%25B2%25E0%25B8%25B0%25E0%25B8%25A5%25E0%25B9%2589%25E0%25B8%25B2%25E0%25B8%2599%2F&psig=AOvVaw3HMVdy-RfXvItBR-MSU1H2&ust=1734853565744000&source=images&cd=vfe&opi=89978449&ved=0CAMQjB1qFwoTCKjgyaWvuIoDFQAAAAAdAAAAABAK -->
+                </article>
+                
+                
+                
+                
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 จังหวัดชลบุรี</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            const isMenuOpen = menu.classList.contains('show');
+    
+            if (isMenuOpen) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        }
+    </script>
+</body>
+</html>
